@@ -38,10 +38,10 @@
 //!
 //! For more examples, check out the `examples` directory within the repository.
 
-mod endpoints;
+mod api;
 mod error;
 mod plausible_analytics;
 
-pub use endpoints::*;
+pub use api::*;
 pub use error::*;
 pub use plausible_analytics::*;
