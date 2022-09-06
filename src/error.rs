@@ -13,6 +13,9 @@ pub enum Error {
         bytes: Bytes,
         status_code: StatusCode,
     },
+
+    /// Error occurred while using the `serde` library.
+    SerdeError(serde_json::Error),
 }
 
 impl error::Error for Error {}
@@ -25,6 +28,7 @@ impl fmt::Display for Error {
                 let text = String::from_utf8_lossy(bytes);
                 write!(f, "{}: {}", status_code, text)
             }
+            Self::SerdeError(e) => write!(f, "{}", e),
         }
     }
 }
@@ -32,5 +36,11 @@ impl fmt::Display for Error {
 impl From<reqwest::Error> for Error {
     fn from(e: reqwest::Error) -> Self {
         Self::ReqwestError(e)
+    }
+}
+
+impl From<serde_json::Error> for Error {
+    fn from(e: serde_json::Error) -> Self {
+        Self::SerdeError(e)
     }
 }

@@ -47,7 +47,7 @@ impl Plausible {
     }
 }
 
-/// Request headers for the Plausible Analytics 'POST /api/event' API.
+/// Request headers for the 'POST /api/event' API.
 #[derive(Debug, Clone)]
 #[allow(clippy::module_name_repetitions)]
 pub struct EventHeaders {
@@ -85,7 +85,7 @@ impl EventHeaders {
     }
 }
 
-/// Request body parameters for the Plausible Analytics 'POST /api/event' API.
+/// Request body parameters for the 'POST /api/event' API.
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[allow(clippy::module_name_repetitions)]
 pub struct EventPayload {
