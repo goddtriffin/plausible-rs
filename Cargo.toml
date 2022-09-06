@@ -12,6 +12,7 @@ keywords = ["plausible", "analytics", "api", "http", "client"]
 categories = ["web-programming"]
 exclude = [
     ".idea/*",
+    ".github/*",
 ]
 
 

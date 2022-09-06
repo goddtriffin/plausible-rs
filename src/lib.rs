@@ -6,15 +6,14 @@
 //!
 //! `PLAUSIBLE_DOMAIN=<domain> cargo run --example event_inline`
 //!
-//! ```rust no_run
+//! ```rust
 //! use plausible_rs::{EventHeaders, EventPayload, Plausible, PropValue, PAGEVIEW_EVENT};
 //! use std::collections::HashMap;
 //! use std::env;
 //!
 //! #[tokio::main]
 //! async fn main() {
-//!     let domain: String = env::var("PLAUSIBLE_DOMAIN")
-//!         .expect("set env var `PLAUSIBLE_DOMAIN` to name of site in Plausible");
+//!     let domain: String = String::from("example.com");
 //!
 //!     Plausible::new().event(
 //!         EventHeaders::new(
