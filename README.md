@@ -8,9 +8,22 @@ A Rust library for the [Plausible Analytics API](https://plausible.io/docs/event
 
 ## Features
 
+- [X] [Health API](https://plausible.io/api/health)
+  - [X] `GET /api/health`
 - [X] [Events API](https://plausible.io/docs/events-api)
+  - [X] `POST /api/event`
 - [ ] [Stats API](https://plausible.io/docs/stats-api) (TODO)
+  - [ ] `GET /api/v1/stats/realtime/visitors`
+  - [ ] `GET /api/v1/stats/aggregate`
+  - [ ] `GET /api/v1/stats/timeseries`
+  - [ ] `GET /api/v1/stats/breakdown`
 - [ ] [Sites API](https://plausible.io/docs/sites-api) (TODO)
+  - [ ] `POST /api/v1/sites`
+  - [ ] `DELETE /api/v1/sites/:site_id`
+  - [ ] `GET /api/v1/sites/:site_id`
+  - [ ] `PUT /api/v1/sites/shared-links`
+  - [ ] `PUT /api/v1/sites/goals`
+  - [ ] `DELETE /api/v1/sites/goals/:goal_id`
 
 ## Examples
 
@@ -47,6 +60,8 @@ async fn main() {
     ).await.unwrap();
 }
 ```
+
+For more examples, check out the [examples](https://github.com/goddtriffin/plausible-rs/blob/master/examples) directory.
 
 ## Developers
 
