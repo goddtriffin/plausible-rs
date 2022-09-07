@@ -61,7 +61,7 @@ async fn main() {
 }
 ```
 
-For more examples, check out the [examples](https://github.com/goddtriffin/plausible-rs/blob/master/examples) directory.
+For more examples, check out the [examples](https://github.com/goddtriffin/plausible-rs/blob/main/examples) directory.
 
 ## Developers
 
@@ -96,4 +96,4 @@ If you're feeling extra adventurous and/or REALLY need those endpoints implement
 
 Made with 🤬 and 🥲 by [Todd Everett Griffin](https://www.toddgriffin.me/).
 
-`plausible-rs` is open source under the [MIT License](https://github.com/goddtriffin/plausible-rs/blob/master/LICENSE).
+`plausible-rs` is open source under the [MIT License](https://github.com/goddtriffin/plausible-rs/blob/main/LICENSE).
