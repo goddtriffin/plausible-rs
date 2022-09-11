@@ -46,17 +46,17 @@ async fn main() {
             String::from("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36"),
             String::from("127.0.0.1")
         ),
-        EventPayload::new(
+        EventPayload::builder(
             domain.clone(),
             PAGEVIEW_EVENT.to_string(),
-            format!("https://{}/test", domain),
-            Some(String::from("https://www.toddgriffin.me/")),
-            Some(2560),
-            Some(HashMap::from([(
+            format!("https://{}/test", domain))
+            .referrer(String::from("https://www.toddgriffin.me/"))
+            .screen_width(2560)
+            .props(HashMap::from([(
                 String::from("author"),
                 PropValue::from(String::from("Todd Everett Griffin")),
             )]))
-        )
+            .build()
     ).await.unwrap();
 }
 ```
