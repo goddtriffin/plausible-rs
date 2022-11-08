@@ -1,7 +1,7 @@
 use crate::Plausible;
 
 impl Plausible {
-    #[allow(dead_code)]
+    #[allow(dead_code, clippy::unused_async)]
     async fn update_site_shared_links(&self) {
         todo!()
     }
