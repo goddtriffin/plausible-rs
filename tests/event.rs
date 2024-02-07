@@ -11,7 +11,7 @@ async fn test() {
     let payload: EventPayload = EventPayload::builder(
         domain.clone(),
         PAGEVIEW_EVENT.to_string(),
-        format!("https://{}/test", domain),
+        format!("https://{domain}/test"),
     )
     .referrer(String::from("https://www.toddgriffin.me/"))
     .screen_width(2560)

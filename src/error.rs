@@ -26,9 +26,9 @@ impl fmt::Display for Error {
             Self::ReqwestError(e) => std::fmt::Display::fmt(&e, f),
             Self::RequestFailed { bytes, status_code } => {
                 let text = String::from_utf8_lossy(bytes);
-                write!(f, "{}: {}", status_code, text)
+                write!(f, "{status_code}: {text}")
             }
-            Self::SerdeError(e) => write!(f, "{}", e),
+            Self::SerdeError(e) => write!(f, "{e}"),
         }
     }
 }
