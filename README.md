@@ -2,7 +2,6 @@
 
 [![Version](https://img.shields.io/crates/v/plausible-rs)](https://crates.io/crates/plausible-rs)
 [![Docs](https://docs.rs/plausible-rs/badge.svg)](https://docs.rs/plausible-rs)
-[![License](https://img.shields.io/crates/l/plausible-rs)](https://crates.io/crates/plausible-rs)
 
 A Rust library for the [Plausible Analytics API](https://plausible.io/docs/events-api).
 
@@ -65,7 +64,7 @@ For more examples, check out the [examples](https://github.com/goddtriffin/plaus
 
 ## Developers
 
-Project is under active maintenance - even if there are no recent commits! Please submit an issue / bug request if you the library needs updating for any reason!
+Project is under active maintenance - even if there are no recent commits! Please submit an issue / bug request if the library needs updating for any reason!
 
 ### Feature Requests
 
@@ -82,16 +81,9 @@ If you're feeling extra adventurous and/or REALLY need those endpoints implement
 ### Commands
 
 - `make lint`
-    - Lints the codebase via `cargo fmt`.
 - `make test`
-    - Tests the codebase via:
-        - `cargo fmt`
-        - `cargo check`
-        - `cargo clippy` (with insanely strict defaults)
-        - `cargo test`.
+- `make fix`
 
 ## Credits
 
 Made with 🤬 and 🥲 by [Todd Everett Griffin](https://www.toddgriffin.me/).
-
-`plausible-rs` is open source under the [MIT License](https://github.com/goddtriffin/plausible-rs/blob/main/LICENSE).
