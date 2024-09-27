@@ -65,8 +65,6 @@ For more examples, check out the [examples](https://github.com/goddtriffin/plaus
 
 ## Developers
 
-Built with: `Rust 1.65`.
-
 Project is under active maintenance - even if there are no recent commits! Please submit an issue / bug request if you the library needs updating for any reason!
 
 ### Feature Requests
