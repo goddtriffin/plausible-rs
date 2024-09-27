@@ -10,15 +10,17 @@ description = "A Rust library for the Plausible Analytics API."
 license = "MIT"
 keywords = ["plausible", "analytics", "api", "http", "client"]
 categories = ["web-programming", "api-bindings"]
-exclude = [".idea/*", ".github/*"]
+include = ["**/*.rs", "Cargo.toml", ".clippy.toml", "LICENSE", "README.md"]
 
 [lib]
 path = "src/lib.rs"
 
 [lints.rust]
-unsafe_code = { level = "forbid", priority = 0 }
+unsafe_code = { level = "forbid", priority = 1 }
+unfulfilled_lint_expectations = { level = "forbid", priority = 1 }
 
 [lints.clippy]
+allow_attributes = { level = "forbid", priority = 1}
 multiple_crate_versions = { level = "allow", priority = 1 }
 nursery = { level = "allow", priority = 0 }
 all = { level = "deny", priority = -1 }

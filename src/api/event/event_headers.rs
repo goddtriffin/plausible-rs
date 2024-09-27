@@ -1,6 +1,5 @@
 /// Request headers for the 'POST /api/event' API.
 #[derive(Debug, Clone)]
-#[allow(clippy::module_name_repetitions)]
 pub struct EventHeaders {
     /// The raw value of User-Agent is used to calculate the `user_id` which identifies a
     /// [unique visitor](https://plausible.io/data-policy#how-we-count-unique-users-without-cookies)
