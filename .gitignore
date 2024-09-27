@@ -2,7 +2,6 @@
 .idea/
 .vscode/
 target/
-bin/
 
 # files
 .DS_Store

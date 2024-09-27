@@ -2,7 +2,7 @@
 #[derive(Debug, Clone)]
 #[allow(clippy::module_name_repetitions)]
 pub struct EventHeaders {
-    /// The raw value of User-Agent is used to calculate the user_id which identifies a
+    /// The raw value of User-Agent is used to calculate the `user_id` which identifies a
     /// [unique visitor](https://plausible.io/data-policy#how-we-count-unique-users-without-cookies)
     /// in Plausible.
     ///
@@ -15,7 +15,7 @@ pub struct EventHeaders {
 
     /// Used to get the IP address of the client.
     ///
-    /// The IP address is used to calculate the user_id which identifies a
+    /// The IP address is used to calculate the `user_id` which identifies a
     /// [unique visitor](https://plausible.io/data-policy#how-we-count-unique-users-without-cookies)
     /// in Plausible. The raw value is anonymized and not stored.
     /// If the header contains a comma-separated list (as it should if the request is sent through
