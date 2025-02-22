@@ -36,7 +36,6 @@ impl Plausible {
 ///
 /// If the individual status is healthy, expect the string value to equal `"ok"`.
 #[derive(Debug, Clone, Serialize, Deserialize)]
-#[expect(clippy::module_name_repetitions)]
 pub struct HealthResponse {
     pub clickhouse: String,
     pub postgres: String,

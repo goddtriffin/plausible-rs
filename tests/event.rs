@@ -1,5 +1,5 @@
 use bytes::Bytes;
-use plausible_rs::{Error, EventHeaders, EventPayload, Plausible, PropValue, PAGEVIEW_EVENT};
+use plausible_rs::{Error, EventHeaders, EventPayload, PAGEVIEW_EVENT, Plausible, PropValue};
 use std::collections::HashMap;
 
 #[tokio::test]
@@ -23,8 +23,10 @@ async fn test() {
 
     // collect headers
     let headers: EventHeaders = EventHeaders::new(
-        String::from("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36"),
-        String::from("127.0.0.1")
+        String::from(
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
+        ),
+        String::from("127.0.0.1"),
     );
 
     // post Event

@@ -1,4 +1,4 @@
-use plausible_rs::{EventHeaders, EventPayload, Plausible, PropValue, PAGEVIEW_EVENT};
+use plausible_rs::{EventHeaders, EventPayload, PAGEVIEW_EVENT, Plausible, PropValue};
 use std::collections::HashMap;
 use std::env;
 
