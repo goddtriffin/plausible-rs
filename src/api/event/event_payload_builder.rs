@@ -1,4 +1,4 @@
-use crate::{EventPayload, PropValue};
+use crate::{EventPayload, PropValue, Revenue};
 use std::collections::HashMap;
 
 /// Request body parameters for the 'POST /api/event' API.
@@ -68,6 +68,9 @@ pub struct EventPayloadBuilder {
     /// Custom properties only accepts scalar values such as strings, numbers and booleans.
     /// Data structures such as objects, arrays etc. aren't accepted.
     pub props: Option<HashMap<String, PropValue>>,
+
+    /// Revenue data for the event.
+    pub revenue: Option<Revenue>,
 }
 
 impl EventPayloadBuilder {
@@ -80,6 +83,7 @@ impl EventPayloadBuilder {
             referrer: None,
             screen_width: None,
             props: None,
+            revenue: None,
         }
     }
 
@@ -98,6 +102,11 @@ impl EventPayloadBuilder {
         self
     }
 
+    pub fn revenue(&mut self, revenue: Revenue) -> &mut Self {
+        self.revenue = Some(revenue);
+        self
+    }
+
     #[must_use]
     pub fn build(&self) -> EventPayload {
         EventPayload::new(
@@ -107,6 +116,7 @@ impl EventPayloadBuilder {
             self.referrer.clone(),
             self.screen_width,
             self.props.clone(),
+            self.revenue.clone(),
         )
     }
 }

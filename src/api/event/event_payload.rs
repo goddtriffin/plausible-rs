@@ -71,6 +71,16 @@ pub struct EventPayload {
     /// Data structures such as objects, arrays etc. aren't accepted.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub props: Option<HashMap<String, PropValue>>,
+
+    /// Revenue data for the event.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub revenue: Option<Revenue>,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct Revenue {
+    pub currency: String,
+    pub amount: f32,
 }
 
 impl EventPayload {
@@ -82,6 +92,7 @@ impl EventPayload {
         referrer: Option<String>,
         screen_width: Option<usize>,
         props: Option<HashMap<String, PropValue>>,
+        revenue: Option<Revenue>,
     ) -> Self {
         Self {
             domain,
@@ -90,6 +101,7 @@ impl EventPayload {
             referrer,
             screen_width,
             props,
+            revenue
         }
     }
 

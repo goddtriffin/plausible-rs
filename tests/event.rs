@@ -1,5 +1,5 @@
 use bytes::Bytes;
-use plausible_rs::{Error, EventHeaders, EventPayload, PAGEVIEW_EVENT, Plausible, PropValue};
+use plausible_rs::{Error, EventHeaders, EventPayload, PAGEVIEW_EVENT, Plausible, PropValue, Revenue};
 use std::collections::HashMap;
 
 #[tokio::test]
@@ -19,6 +19,7 @@ async fn test() {
         String::from("author"),
         PropValue::from(String::from("Todd Everett Griffin")),
     )]))
+    .revenue(Revenue{ currency: "USD".to_string(), amount: 123.45 })
     .build();
 
     // collect headers
