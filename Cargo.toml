@@ -1,9 +1,13 @@
-[package]
-name = "plausible-rs"
+[workspace]
+members = ["plausible_rs"]
+resolver = "3"
+
+[workspace.package]
 version = "0.1.5"
 edition = "2024"
 rust-version = "1.85"
 authors = ["Todd Everett Griffin <tgriffin115@gmail.com>"]
+readme = "README.md"
 repository = "https://github.com/goddtriffin/plausible-rs"
 homepage = "https://www.toddgriffin.me/"
 description = "A Rust library for the Plausible Analytics API."
@@ -12,14 +16,11 @@ keywords = ["plausible", "analytics", "api", "http", "client"]
 categories = ["web-programming", "api-bindings"]
 include = ["**/*.rs", "Cargo.toml", ".clippy.toml", "LICENSE", "README.md"]
 
-[lib]
-path = "src/lib.rs"
-
-[lints.rust]
+[workspace.lints.rust]
 unsafe_code = { level = "forbid", priority = 1 }
 unfulfilled_lint_expectations = { level = "forbid", priority = 1 }
 
-[lints.clippy]
+[workspace.lints.clippy]
 allow_attributes = { level = "forbid", priority = 1 }
 multiple_crate_versions = { level = "allow", priority = 1 }
 nursery = { level = "allow", priority = 0 }
@@ -32,7 +33,7 @@ perf = { level = "deny", priority = -1 }
 pedantic = { level = "deny", priority = -1 }
 cargo = { level = "deny", priority = -1 }
 
-[dependencies]
+[workspace.dependencies]
 # tokio
 tokio = { version = "1.43.0", features = ["full"] }
 
